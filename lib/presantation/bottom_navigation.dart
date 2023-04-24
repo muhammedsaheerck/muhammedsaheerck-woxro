@@ -14,17 +14,33 @@ class ScreenBottomNavigation extends StatelessWidget {
                   .selectedIndex],
       bottomNavigationBar: Consumer<BottomNavigationProvider>(
         builder: (context, valueP, child) => BottomNavigationBar(
-          backgroundColor: ,
+          elevation: 1,
           items: const [
             BottomNavigationBarItem(
               label: "",
               icon: Icon(
                 Icons.home,
+                color: Colors.black,
               ),
             ),
-            BottomNavigationBarItem(icon: Icon(Icons.call), label: ""),
-            BottomNavigationBarItem(icon: Icon(Icons.mail), label: ""),
-            BottomNavigationBarItem(icon: Icon(Icons.location_city), label: "")
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.call,
+                  color: Colors.black,
+                ),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.mail,
+                  color: Colors.black,
+                ),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.location_city,
+                  color: Colors.black,
+                ),
+                label: "")
           ],
           currentIndex: valueP.selectedIndex,
           onTap: (value) {

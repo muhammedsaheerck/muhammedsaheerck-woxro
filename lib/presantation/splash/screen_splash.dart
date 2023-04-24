@@ -20,10 +20,7 @@ class ScreenSplash extends StatelessWidget {
                 fit: BoxFit.fill,
               ),
             ),
-            const Text(
-              "Welcome",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
-            ),
+            const HeadingCustomText(),
             const SizedBox(
               height: 10,
             ),
@@ -39,7 +36,7 @@ class ScreenSplash extends StatelessWidget {
                 width: MediaQuery.of(context).size.width / 1.3,
                 child: OutlinedButton(
                   onPressed: () {
-                    Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => const ScreenBottomNavigation(),
                     ));
                   },
@@ -60,6 +57,20 @@ class ScreenSplash extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class HeadingCustomText extends StatelessWidget {
+  const HeadingCustomText({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text(
+      "Welcome",
+      style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
     );
   }
 }
